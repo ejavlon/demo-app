@@ -73,7 +73,7 @@ public class MealService {
         if(!optionalMeal.isPresent())
             return ResponseApi.builder()
                     .success(true)
-                    .message("Meal found")
+                    .message("Meal not found")
                     .build();
 
         mealRepository.deleteById(id);
@@ -88,7 +88,7 @@ public class MealService {
         if(!optionalMeal.isPresent())
             return ResponseApi.builder()
                     .success(true)
-                    .message("Meal found")
+                    .message("Meal not found")
                     .build();
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
